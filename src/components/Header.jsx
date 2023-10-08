@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import { RxCross1 } from "react-icons/rx";
 import { RiArrowDropDownLine } from "react-icons/ri";
+
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSelection, setCurrentSelection] = useState("About us");
@@ -33,7 +34,7 @@ function Header() {
               : "hidden"
           } lg:flex lg:items-center`}
         >
-          <ul className="lg:flex lg:space-x-14 text-[14px] ">
+          <ul className="lg:flex lg:space-x-14 text-[14px] overflow-scroll sm:overflow-hidden h-[60%] ">
             <li
               onClick={() =>
                 currentSelection === "Services"
@@ -154,7 +155,7 @@ function Header() {
               <div
                 className={`${
                   isMenuOpen && currentSelection === "About us"
-                    ? " flex flex-col text-white px-12 py-5 text-base font-light mt-5 "
+                    ? " flex flex-col text-white px-12 py-5 text-base font-light "
                     : "hidden"
                 }`}
               >
