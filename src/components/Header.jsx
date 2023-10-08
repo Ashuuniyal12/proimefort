@@ -4,29 +4,6 @@ import { RxCross1 } from "react-icons/rx";
 import { RiArrowDropDownLine, RiArrowDropRightLine } from "react-icons/ri";
 import { SiHtml5 } from "react-icons/si";
 
-const HoverItem = () => {
-  return (
-    <div className=" group  w-[400px] flex  items-start gap-4 ">
-      <div className="p-1">
-        {" "}
-        <SiHtml5 size={40} />
-      </div>
-      <div className="space-y-3">
-        <a href="" className="font-bold text-xl  ">
-          <span>Network Penetration Testing </span>{" "}
-          <RiArrowDropRightLine className="inline-block " />{" "}
-        </a>
-
-
-        <p className="text-sm">
-          Reach out to us. We can make something awesome togetherReach out to
-          us. We can make something awesome together
-        </p>
-      </div>
-    </div>
-  );
-};
-
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSelection, setCurrentSelection] = useState("About us");
@@ -260,7 +237,6 @@ function Header() {
                   }`}
                 >
                   <li className=" parent w-[350px] flex  items-start gap-4 ">
-                    
                     <div className="space-y-3">
                       <a href="" className="font-bold text-[16px]  ">
                         <span>Primpilot </span>{" "}
@@ -332,7 +308,6 @@ function Header() {
                   }`}
                 >
                   <li className=" parent w-[350px] flex  items-start gap-4 ">
-                    
                     <div className="space-y-3">
                       <a href="" className="font-bold text-[16px]  ">
                         <span>Our story </span>{" "}
@@ -357,7 +332,6 @@ function Header() {
                     </div>
                   </li>
                   <li className=" parent w-[350px] flex  items-start gap-4 ">
-                    
                     <div className="space-y-3">
                       <a href="" className="font-bold text-[16px]  ">
                         <span>Leadership Team </span>{" "}
@@ -382,7 +356,6 @@ function Header() {
                     </div>
                   </li>
                   <li className=" parent w-[350px] flex  items-start gap-4 ">
-                    
                     <div className="space-y-3">
                       <a href="" className="font-bold text-[16px]  ">
                         <span>Carrer </span>{" "}
