@@ -4,14 +4,14 @@ import {  BiLogoFacebook } from "react-icons/bi";
 import { BsInstagram, BsTwitter ,BsArrowRightShort } from "react-icons/bs";
 const Footer = () => {
   return (
-    <div className="pt-[120px] bg-[#07071B] text-white w-full">
-      <div className="flex sm:flex-row flex-col justify-between gap-16 sm:gap-0 sm:mx-[150px] mx-[20px]  items-center">
+    <div className="pt-[120px] bg-[#07071B] text-white w-full flex flex-col items-center  ">
+      <div className="flex sm:flex-row flex-col  gap-16 sm:mx-[150px] mx-[20px]  max-w-[1260px] ">
         <div className="flex flex-col ">
           {" "}
           <a href="/" className=" text-xl font-bold ">
             <img src={logo} alt="logo" className="w-40  " />
           </a>
-          <p className="sm:max-w-[380px] mt-9 text-[10px] sm:text-[12px]">
+          <p className="sm:max-w-[380px] mt-9 text-[8px] sm:text-[10px]">
             Primefort is a global provider of IT security solutions that solve
             real business issues. Our dedicated team of security engineers
             offers solutions to customers throughout the world for securing
@@ -20,31 +20,31 @@ const Footer = () => {
         </div>
         <div className="sm:block hidden">
           <h1 className="text-[#4858E8] font-bold mb-[24px]">Services</h1>
-          <p className="underline mb-3 font-thin text-[12px]">
+          <p className="underline mb-3 font-thin text-[10px]">
             Web Application Penetration Testing{" "}
           </p>
-          <p className="underline mb-3 font-thin text-[12px] ">
+          <p className="underline mb-3 font-thin text-[10px] ">
             Mobile Application Penetration Testing
           </p>
-          <p className="underline mb-3 font-thin text-[12px] ">
+          <p className="underline mb-3 font-thin text-[10px] ">
             Network Penetration Testing{" "}
           </p>
-          <p className="underline mb-3 font-thin text-[12px] ">
+          <p className="underline mb-3 font-thin text-[10px] ">
             Cloud Security{" "}
           </p>
-          <p className="underline mb-3 font-thin text-[12px] ">Compliance</p>
-          <p className="underline mb-3 font-thin text-[12px] ">SOC</p>
+          <p className="underline mb-3 font-thin text-[10px] ">Compliance</p>
+          <p className="underline mb-3 font-thin text-[10px] ">SOC</p>
         </div>
         <div className="sm:block hidden">
           <h1 className="text-[#4858E8] font-bold mb-[24px]">About Us</h1>
-          <p className="underline mb-3 font-thin text-[12px] ">Our Story</p>
-          <p className="underline mb-3 font-thin text-[12px] ">Our Journey</p>
-          <p className="underline mb-3 font-thin text-[12px] ">
+          <p className="underline mb-3 font-thin text-[10px] ">Our Story</p>
+          <p className="underline mb-3 font-thin text-[10px] ">Our Journey</p>
+          <p className="underline mb-3 font-thin text-[10px] ">
             Leadership Team{" "}
           </p>
-          <p className="underline mb-3 font-thin text-[12px] ">Advisors </p>
-          <p className="underline mb-3 font-thin text-[12px] ">Careers </p>
-          <p className="underline mb-3 font-thin text-[12px] "> Awards</p>
+          <p className="underline mb-3 font-thin text-[10px] ">Advisors </p>
+          <p className="underline mb-3 font-thin text-[10px] ">Careers </p>
+          <p className="underline mb-3 font-thin text-[10px] "> Awards</p>
         </div>
         <div className="sm:pt-[20px] ">
           <div className=" mb-8  ">
