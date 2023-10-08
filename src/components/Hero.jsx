@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BiSolidMap, BiLogoFacebook } from "react-icons/bi";
-import { BsInstagram, BsTwitter ,BsArrowRightShort } from "react-icons/bs";
+import { BsInstagram, BsTwitter, BsArrowRightShort } from "react-icons/bs";
+
 const Hero = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log("Form data:", formData);
+  };
   return (
     <section className="max-w-[1260px] sm:mx-auto  mx-0 md:px-7 my-48">
       <div className="flex sm:flex-row flex-col contact-form justify-between gap-18 sm:p-9">
@@ -49,14 +70,15 @@ const Hero = () => {
         </div>
         <div className="border border-[#4858E8] sm:w-[50%] p-[12px]">
           <div className="bg-[#E3E9FF] px-[60] py-[66] ">
-            <form className="px-[60px] py-[66px]" action="">
+            <form className="px-[60px] py-[66px]" onSubmit={handleSubmit}>
               <div className="label-form ">
                 <label for="name">
                   <input
                     type="text"
                     id="name"
                     name="name"
-                    value=""
+                    value={formData.name}
+                    onChange={handleInputChange} 
                     placeholder="Enter your full name"
                     required="true"
                     spellcheck="false"
@@ -70,7 +92,8 @@ const Hero = () => {
                     type="email"
                     id="email"
                     name="email"
-                    value=""
+                    value={formData.email}
+                    onChange={handleInputChange} 
                     placeholder="Enter your email address"
                     required=""
                     spellcheck="false"
@@ -85,7 +108,8 @@ const Hero = () => {
                     type="text"
                     id="subject"
                     name="subject"
-                    value=""
+                    value={formData.subject}
+                    onChange={handleInputChange} 
                     placeholder="Enter the subject of your message"
                     required=""
                     spellcheck="false"
@@ -100,7 +124,9 @@ const Hero = () => {
                     id="message"
                     name="message"
                     required=""
-                    spellcheck="false" 
+                    value={formData.message}
+                    onChange={handleInputChange} 
+                    spellcheck="false"
                     rows="6"
                     className="bg-[#E3E9FF] w-full "
                   ></textarea>
@@ -109,14 +135,14 @@ const Hero = () => {
               </div>
 
               <div className="label-form pt-8">
-          <button type="submit"
-            className="border-[#4858E8]  flex items-center gap-4 border-[1px] border-l-4   text-[#4858E8] hover:bg-[#E3E9FF]  hover:text-[#0E0E30] hover:border-[#0E0E30] text-sm font-bold py-2 px-6 "
-          >
-           SEND MESSAGE
-           <BsArrowRightShort className="text-[36px] "/>
-          </button>
-        </div>
-
+                <button
+                  type="submit"
+                  className="border-[#4858E8]  flex items-center gap-4 border-[1px] border-l-4   text-[#4858E8] hover:bg-[#E3E9FF]  hover:text-[#0E0E30] hover:border-[#0E0E30] text-sm font-bold py-2 px-6 "
+                >
+                  SEND MESSAGE
+                  <BsArrowRightShort className="text-[36px] " />
+                </button>
+              </div>
             </form>
           </div>
         </div>

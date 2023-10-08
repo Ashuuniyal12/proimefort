@@ -17,6 +17,7 @@ const HoverItem = () => {
           <RiArrowDropRightLine className="inline-block " />{" "}
         </a>
 
+
         <p className="text-sm">
           Reach out to us. We can make something awesome togetherReach out to
           us. We can make something awesome together
